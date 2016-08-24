@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <style type="text/css"></style> -->
+  </head>
+  <body>
+
+    <!-- 主体内容 -->
+    <div id="root" class="container">
+
+      <!-- 点击事件 -->
+      <div class="m-article-action">
+        <div id="action_mid" class="article-action-mid"></div>
+      </div>
+
+      <!-- 顶部边栏 -->
+      <div id="top_nav" class="top-nav" style="display:none">
+        <div class="icon-back"></div>
+        <div class="nav-title">返回书架</div>
+      </div>
+
+
+      <!-- 底部切换面板 -->
+      <div class="nav-panel-bg font-container menu_container" style="display: none"></div>
+
+      <div class="nav-panel font-container" id="font_container" style="display:none">
+        <!-- 字体大小按钮 -->
+        <div class="child-mod">
+          <span>字号</span>
+          <button id="large_font" class="font-size-button">大</button>
+          <button id="small_font" class="font-size-button">小</button>
+        </div>
+
+        <!-- 背景切换按钮 -->
+        <div class="child-mod">
+          <span>背景</span>
+          <div class="bg-container bg-container-1">
+            <div class="bg-container-current"></div>
+          </div>
+          <div class="bg-container bg-container-2"></div>
+          <div class="bg-container bg-container-3"></div>
+          <div class="bg-container bg-container-4"></div>
+          <div class="bg-container bg-container-5"></div>
+          <div class="bg-container bg-container-6"></div>
+        </div>
+      </div>
+
+      <!-- 书本目录 -->
+      <div class="nav-panel menu-container" id="menu_container" style="display: none">
+        <div class="book-name" id="book_name">
+          <h5>连城诀</h5>
+          <div class="book-chapter" id="book_chapter">
+            <span>第01章</span>
+            <span>第02章</span>
+            <span>第03章</span>
+            <span>第04章</span>
+            <span>第05章</span>
+            <span>第06章</span>
+            <span>第07章</span>
+            <span>第08章</span>
+            <span>第09章</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 底部边栏 -->
+      <div class="bottom-nav-bg js-bottom-nav" style="display:none"></div>
+
+      <div class="bottom-nav js-bottom-nav" style="display:none">
+        <div class="item menu-button" id="menu_button">
+          <div class="item-wrap">
+            <div class="icon-menu"></div>
+            <div class="icon-text">目录</div>
+          </div>
+        </div>
+        <div class="item" id="font_button">
+          <div class="item-wrap">
+            <div class="icon-font"></div>
+            <div class="icon-text">字体</div>
+          </div>
+        </div>
+        <div class="item" id="night_button">
+          <div class="item-wrap">
+            <div class="icon-night"></div>
+            <div class="icon-text">夜间</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 正文 -->
+      <div id="fiction_chapter_title"></div>
+      <div id="fiction_container" class="m-read-content">
+        <h4>城市设计与更新</h4>
+        <p>
+          当代中国的城市化进程并不是一个完整的整体，城市之间、同一城市的不同部分存在着差别。这些差别不仅反映在发展规模与发展模式等方面，而且也反映在不同社会群体的生存方式和空间形态上。另一方面，中国的城市文化正在融入全球化的进程中，经历着一个内在充满矛盾的过程；既存在一体化的趋势，又存在多样化的倾向；并且这两种倾向也都体现在中国城市的物质形态上。
+        </p>
+        <p>
+          当代中国城市设计研究更关注城市文化内在矛盾与城市形态之间的关系。本次设计是一个研究性的课题，将着重探讨传统村镇的复兴与内在推动力的关系。将针对特定的地段，提出合适的更新策略，以此作为传统村镇复兴的指导思想，并为特定村镇的形态建设与发展，探究新的理论模式。
+        </p>
+        <p>
+          当代中国的城市化进程并不是一个完整的整体，城市之间、同一城市的不同部分存在着差别。这些差别不仅反映在发展规模与发展模式等方面，而且也反映在不同社会群体的生存方式和空间形态上。另一方面，中国的城市文化正在融入全球化的进程中，经历着一个内在充满矛盾的过程；既存在一体化的趋势，又存在多样化的倾向；并且这两种倾向也都体现在中国城市的物质形态上。
+        </p>
+        <p>
+          当代中国城市设计研究更关注城市文化内在矛盾与城市形态之间的关系。本次设计是一个研究性的课题，将着重探讨传统村镇的复兴与内在推动力的关系。将针对特定的地段，提出合适的更新策略，以此作为传统村镇复兴的指导思想，并为特定村镇的形态建设与发展，探究新的理论模式。
+        </p>
+      </div>
+
+      <!-- 上一章，下一章 -->
+      <div class="m-button-bar">
+        <ul class="u-table">
+          <li id="pre_button">上一章</li>
+          <li id="next_button">下一章</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+      window.jQuery = $;
+    </script>
+    <script src="js/jquery.base64.js"></script>
+    <script src="js/jquery.jsonp.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script></script> -->
+  </body>
+</html>
