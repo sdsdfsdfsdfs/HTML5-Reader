@@ -70,7 +70,7 @@
           var url = data.jsonp;
           Util.getBSONP(url, function(data) {
             $('#init_loading').hide();
-            onChange_ && onChange_(data);
+            onChange_ && onChange_(data)
           });
         } else {
 
